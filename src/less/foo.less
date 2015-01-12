@@ -1,0 +1,12 @@
+.mixin(@value) when (ispixel(@value)) {width: @value}
+.mixin(@value) when not(default())    {padding: (@value / 5)}
+
+div-1 {
+  .mixin(100px);
+}
+
+div-2 {
+  /* ... */
+  .mixin(100%);
+}
+
